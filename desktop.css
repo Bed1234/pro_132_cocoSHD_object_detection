@@ -1,0 +1,26 @@
+body{
+    text-align:center;
+    background-size:cover;
+}
+
+
+.heading
+{
+    font-family: monospace;
+color:rgb(9, 243, 173);
+font-size: 23px;
+width: 100%;
+margin: 0px;
+}
+canvas{
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 10px;
+}
+#icon{
+    height: 35px;
+    width:98px;
+}
+#icon:hover{
+  background-color: rgb(224, 76, 243);
+  font-size: 20px;
+}
