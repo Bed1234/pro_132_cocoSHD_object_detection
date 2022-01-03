@@ -7,11 +7,11 @@ status = "";
 objects = [];
 
 function preload(){
-    img = loadImage("desktop.jpg");
+    img = loadImage("cup.jpg");
 }
 
 function setup(){
-    canvas = createCanvas( 380 , 380);
+    canvas = createCanvas( 350 , 350);
     canvas.center();
     
     //initializing cocossd model
@@ -40,7 +40,7 @@ function gotResults(error , results){
 function draw(){
 
     
-    image(img , 0 , 0 , 380 , 380);
+    image(img , 0 , 0 , 350 , 350);
 
     if (status != "") {
         for (i = 0; i < objects.length; i++) {
@@ -49,14 +49,15 @@ function draw(){
              fill ("#FF0000");
              percent = floor(objects[i].confidence * 100);
 
-             text (objects[i].label + " " +  percent + "%" , objects[i].x + 40, objects[i].y + 35 , 100, 100);
+             text (objects[i].label + " " +  percent + "%" , objects[i].x + 15, objects[i].y + 15 , 100, 100);
              textSize(20);
+
              noFill ();
              stroke ("#FF0000");
-             rect ( objects[i].x , objects[i].y , objects[i].width - 350, objects[i].height - 250);
+             rect ( objects[i].x , objects[i].y , objects[i].width-20, objects[i].height-150 );
         }
     } 
         
+   
     
-  
 }

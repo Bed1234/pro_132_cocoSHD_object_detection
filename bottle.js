@@ -7,7 +7,7 @@ status = "";
 objects = [];
 
 function preload(){
-    img = loadImage("desktop.jpg");
+    img = loadImage("bottles.jpg");
 }
 
 function setup(){
@@ -49,14 +49,14 @@ function draw(){
              fill ("#FF0000");
              percent = floor(objects[i].confidence * 100);
 
-             text (objects[i].label + " " +  percent + "%" , objects[i].x + 40, objects[i].y + 35 , 100, 100);
+             text (objects[i].label + " " +  percent + "%" , objects[i].x + 15, objects[i].y + 15 , 100, 100);
              textSize(20);
+
              noFill ();
              stroke ("#FF0000");
-             rect ( objects[i].x , objects[i].y , objects[i].width - 350, objects[i].height - 250);
+             rect ( objects[i].x-20 , objects[i].y-50 , objects[i].width-30, objects[i].height-250 );
         }
     } 
-        
+ 
     
-  
 }

@@ -7,7 +7,7 @@ status = "";
 objects = [];
 
 function preload(){
-    img = loadImage("desktop.jpg");
+    img = loadImage("books.jpg");
 }
 
 function setup(){
@@ -49,14 +49,14 @@ function draw(){
              fill ("#FF0000");
              percent = floor(objects[i].confidence * 100);
 
-             text (objects[i].label + " " +  percent + "%" , objects[i].x + 40, objects[i].y + 35 , 100, 100);
-             textSize(20);
+             text (objects[i].label + " " +  percent + "%" , objects[i].x + 10, objects[i].y  , 100, 100);
+
              noFill ();
              stroke ("#FF0000");
-             rect ( objects[i].x , objects[i].y , objects[i].width - 350, objects[i].height - 250);
+             rect ( objects[i].x , objects[i].y , objects[i].width-400, objects[i].height-390 );
         }
     } 
         
     
-  
+    
 }
